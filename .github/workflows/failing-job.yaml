@@ -1,11 +1,7 @@
 name: Test exiting on failure
 
 on:
-  workflow_dispatch:
-    inputs:
-      mentions: 
-        options: 
-          - '@Carl'
+  - push 
 jobs:
   build:
     strategy:
