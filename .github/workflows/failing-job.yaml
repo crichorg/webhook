@@ -15,8 +15,6 @@ jobs:
     name: '@Carl' 
     
     steps:
-    - name: '@Carl'
-      run: echo '@Carl Mention' 
     - uses: actions/checkout@v1
     - name: Try to fail
       run: exit 1
