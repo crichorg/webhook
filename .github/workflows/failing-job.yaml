@@ -1,10 +1,13 @@
 name: Test exiting on failure
 
-on: [push]
-
+on:
+  workflow_dispatch:
+    inputs:
+      mentions: 
+        options: 
+          - '@Carl'
 jobs:
   build:
-
     strategy:
       matrix:
         os: [ubuntu-latest]
