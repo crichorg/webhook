@@ -9,6 +9,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
+    outputs: ${{ '@Carl' }}
     
     steps:
     - uses: actions/checkout@v1
@@ -17,29 +18,29 @@ jobs:
     - name: Print message if we don't fail
       run: echo Should not get here
       
-  build2:
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-    runs-on: ${{ matrix.os }}
+  # build2:
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest]
+  #   runs-on: ${{ matrix.os }}
     
-    steps:
-    - uses: actions/checkout@v1
-    - name: Try to fail
-      run: exit 1
-    - name: Print message if we don't fail
-      run: echo Should not get here
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Try to fail
+  #     run: exit 1
+  #   - name: Print message if we don't fail
+  #     run: echo Should not get here
       
-  build3:
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-    runs-on: ${{ matrix.os }}
+  # build3:
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest]
+  #   runs-on: ${{ matrix.os }}
 
     
-    steps:
-    - uses: actions/checkout@v1
-    - name: Try to fail
-      run: exit 1
-    - name: Print message if we don't fail
-      run: echo Should not get here
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Try to fail
+  #     run: exit 1
+  #   - name: Print message if we don't fail
+  #     run: echo Should not get here
